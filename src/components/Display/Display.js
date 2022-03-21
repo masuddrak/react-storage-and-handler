@@ -1,9 +1,10 @@
 import React from 'react';
+import { addStorage} from '../../ustilitis/localstorage';
 
 const Display = (props) => {
     const {name,id,price}=props.cosmatic;
     const addToCard=(id)=>{
-        console.log(id)
+        addStorage(id);
     }
     return (
         <div>
