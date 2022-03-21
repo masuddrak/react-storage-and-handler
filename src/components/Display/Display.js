@@ -1,10 +1,12 @@
 import React from 'react';
 
 const Display = (props) => {
-    const {name,id}=props.cosmatic;
+    const {name,id,price}=props.cosmatic;
     return (
         <div>
-            <h1>Product Name:{id}</h1>
+            <h3>Name: {name}</h3>
+            <p>id: {id}</p>
+            <p>Price: {price}</p>
         </div>
     );
 };

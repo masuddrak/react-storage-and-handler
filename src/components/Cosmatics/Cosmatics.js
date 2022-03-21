@@ -1,16 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Display from '../Display/Display';
 
 
 
 const Cosmatics = () => {
-    const cosmatics=[
-        {id:1,name:'alta',price:100},
-        {id:2,name:'alta',price:200},
-        {id:3,name:'alta',price:300},
-        {id:4,name:'alta',price:400},
-        {id:5,name:'alta',price:500},
-    ]
+    const [cosmatics,setCosmatics]=useState([]);
+    useEffect(()=>{
+        fetch('data.json')
+        .then(res=>res.json())
+        .then(data=>setCosmatics(data))
+    },[])
     return (
         <div>
             <h2>Welcome To My Cosmetics </h2>
