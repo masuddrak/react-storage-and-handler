@@ -1,8 +1,11 @@
-const add=(first,second)=>{
-    return first+second;
-}
-const multiplay=(first,second)=>{
-    return first*second;
-}
+import React from 'react';
 
-export  {add,multiplay};
+const calculate = () => {
+    return (
+        <div>
+            
+        </div>
+    );
+};
+
+export default calculate;
