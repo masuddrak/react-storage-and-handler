@@ -20,5 +20,15 @@ const addStorage=id=>{
         shoppingCard[id]=1
     }
     localStorage.setItem('addShopingCard',JSON.stringify(shoppingCard))
+};
+const removProduct=id=>{
+    const storageCard=localStorage.getItem('addShopingCard');
+    if(storageCard){
+      const  shoppingCard=JSON.parse(storageCard);
+        if(id in shoppingCard){
+            delete shoppingCard[id];
+            localStorage.setItem('addShopingCard',JSON.stringify(shoppingCard));
+        }
+    }
 }
-export {addStorage}
+export {addStorage,removProduct}
